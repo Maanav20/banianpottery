@@ -100,7 +100,7 @@ const Contact = () => {
                     />
                   </div>
 
-                  <Button type="submit" size="lg" className="w-full">
+                  <Button type="submit" size="lg" className="w-full bg-golden hover:bg-golden/90 text-dark-charcoal font-semibold">
                     Send Message
                   </Button>
                 </form>
@@ -120,15 +120,15 @@ const Contact = () => {
                 <div className="space-y-6">
                   <div className="flex items-start gap-4 p-4 rounded-xl glass hover-lift">
                     <div className="flex-shrink-0">
-                      <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
-                        <Mail className="h-6 w-6 text-primary" />
+                    <div className="w-12 h-12 rounded-full bg-golden/10 flex items-center justify-center">
+                        <Mail className="h-6 w-6 text-golden" />
                       </div>
                     </div>
                     <div>
                       <h3 className="font-semibold mb-1 text-foreground">Email</h3>
                       <a
                         href="mailto:hello@banianpottery.com"
-                        className="text-muted-foreground hover:text-primary transition-smooth"
+                        className="text-muted-foreground hover:text-golden transition-smooth"
                       >
                         hello@banianpottery.com
                       </a>
@@ -137,15 +137,15 @@ const Contact = () => {
 
                   <div className="flex items-start gap-4 p-4 rounded-xl glass hover-lift">
                     <div className="flex-shrink-0">
-                      <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
-                        <Phone className="h-6 w-6 text-primary" />
+                      <div className="w-12 h-12 rounded-full bg-golden/10 flex items-center justify-center">
+                        <Phone className="h-6 w-6 text-golden" />
                       </div>
                     </div>
                     <div>
                       <h3 className="font-semibold mb-1 text-foreground">Phone</h3>
                       <a
                         href="tel:+919876543210"
-                        className="text-muted-foreground hover:text-primary transition-smooth"
+                        className="text-muted-foreground hover:text-golden transition-smooth"
                       >
                         +91 98765 43210
                       </a>
@@ -154,8 +154,8 @@ const Contact = () => {
 
                   <div className="flex items-start gap-4 p-4 rounded-xl glass hover-lift">
                     <div className="flex-shrink-0">
-                      <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
-                        <Instagram className="h-6 w-6 text-primary" />
+                      <div className="w-12 h-12 rounded-full bg-golden/10 flex items-center justify-center">
+                        <Instagram className="h-6 w-6 text-golden" />
                       </div>
                     </div>
                     <div>
@@ -164,7 +164,7 @@ const Contact = () => {
                         href="https://instagram.com/banianpottery"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-muted-foreground hover:text-primary transition-smooth"
+                        className="text-muted-foreground hover:text-golden transition-smooth"
                       >
                         @banianpottery
                       </a>
@@ -173,8 +173,8 @@ const Contact = () => {
 
                   <div className="flex items-start gap-4 p-4 rounded-xl glass hover-lift">
                     <div className="flex-shrink-0">
-                      <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
-                        <MapPin className="h-6 w-6 text-primary" />
+                      <div className="w-12 h-12 rounded-full bg-golden/10 flex items-center justify-center">
+                        <MapPin className="h-6 w-6 text-golden" />
                       </div>
                     </div>
                     <div>
@@ -206,7 +206,7 @@ const Contact = () => {
               placeholder="Your email address"
               className="flex-1"
             />
-            <Button>Subscribe</Button>
+            <Button className="bg-golden hover:bg-golden/90 text-dark-charcoal font-semibold">Subscribe</Button>
           </div>
         </div>
       </section>

@@ -19,24 +19,25 @@ const Home = () => {
           className="absolute inset-0 bg-cover bg-center"
           style={{ backgroundImage: `url(${heroImage})` }}
         >
-          <div className="absolute inset-0 bg-gradient-to-b from-earth-brown/60 via-earth-brown/40 to-background" />
+          <div className="absolute inset-0 bg-gradient-to-b from-dark-charcoal/60 via-dark-charcoal/40 to-background" />
         </div>
 
         <div className="relative z-10 container mx-auto px-4 text-center animate-fade-in-up">
-          <h1 className="text-5xl md:text-7xl font-serif font-bold text-clay-cream mb-6">
-            Where Roots Meet Clay
+          <h1 className="text-5xl md:text-7xl font-serif font-bold mb-6">
+            <span className="text-warm-cream">Where Roots Meet </span>
+            <span className="text-golden">Clay</span>
           </h1>
-          <p className="text-xl md:text-2xl text-clay-cream/90 mb-8 max-w-2xl mx-auto">
+          <p className="text-xl md:text-2xl text-warm-cream/90 mb-8 max-w-2xl mx-auto">
             Discover the art of hand-built pottery in a community space for creativity, connection, and healing.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground">
+            <Button asChild size="lg" className="bg-golden hover:bg-golden/90 text-dark-charcoal font-semibold">
               <Link to="/workshops">
                 Join a Workshop
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
             </Button>
-            <Button asChild size="lg" variant="outline" className="glass-strong text-clay-cream border-clay-cream/30 hover:bg-clay-cream/10">
+            <Button asChild size="lg" variant="outline" className="glass-strong text-warm-cream border-warm-cream/30 hover:bg-warm-cream/10">
               <Link to="/gallery">View Gallery</Link>
             </Button>
           </div>
@@ -48,7 +49,7 @@ const Home = () => {
         <div className="container mx-auto">
           <div className="text-center mb-12 animate-fade-in">
             <h2 className="text-4xl md:text-5xl font-serif font-bold text-foreground mb-4">
-              Handcrafted with Love
+              Handcrafted with <span className="text-golden">Love</span>
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
               Every piece is one-of-a-kind, shaped by hands, imperfection, and intention.
@@ -71,10 +72,10 @@ const Home = () => {
                   alt={item.title}
                   className="w-full h-80 object-cover transition-smooth group-hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-earth-brown/90 via-earth-brown/40 to-transparent opacity-0 group-hover:opacity-100 transition-smooth">
-                  <div className="absolute bottom-0 left-0 right-0 p-6 text-clay-cream">
-                    <h3 className="text-2xl font-serif font-bold mb-2">{item.title}</h3>
-                    <p className="text-clay-cream/80">{item.desc}</p>
+                <div className="absolute inset-0 bg-gradient-to-t from-dark-charcoal/90 via-dark-charcoal/40 to-transparent opacity-0 group-hover:opacity-100 transition-smooth">
+                  <div className="absolute bottom-0 left-0 right-0 p-6 text-warm-cream">
+                    <h3 className="text-2xl font-serif font-bold mb-2 text-golden">{item.title}</h3>
+                    <p className="text-warm-cream/80">{item.desc}</p>
                   </div>
                 </div>
               </div>
@@ -118,8 +119,8 @@ const Home = () => {
                 className="text-center p-8 rounded-2xl glass hover-lift animate-fade-in"
                 style={{ animationDelay: `${idx * 0.15}s` }}
               >
-                <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary/10 mb-6">
-                  <item.icon className="h-8 w-8 text-primary" />
+                <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-golden/10 mb-6">
+                  <item.icon className="h-8 w-8 text-golden" />
                 </div>
                 <h3 className="text-xl font-serif font-bold mb-3">{item.title}</h3>
                 <p className="text-muted-foreground">{item.desc}</p>
@@ -134,14 +135,14 @@ const Home = () => {
         <div className="container mx-auto">
           <div className="glass-strong rounded-3xl p-12 text-center">
             <h2 className="text-4xl md:text-5xl font-serif font-bold text-foreground mb-6">
-              Ready to Create Something Beautiful?
+              Ready to Create Something <span className="text-golden">Beautiful</span>?
             </h2>
             <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
               Whether you want to join a workshop, commission a custom piece, or simply explore,
               we'd love to hear from you.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button asChild size="lg">
+              <Button asChild size="lg" className="bg-golden hover:bg-golden/90 text-dark-charcoal font-semibold">
                 <Link to="/workshops">Browse Workshops</Link>
               </Button>
               <Button asChild size="lg" variant="outline">

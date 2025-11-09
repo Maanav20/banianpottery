@@ -8,84 +8,83 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Banian Pottery Color System */
-    --background: 30 50% 92%; /* Clay Cream */
-    --foreground: 10 36% 19%; /* Earth Brown */
+    /* Banian Pottery Brand Colors - From Brand Assets */
+    --background: 45 40% 96%; /* Light warm background */
+    --foreground: 20 15% 25%; /* Dark charcoal brown */
 
     --card: 0 0% 100%;
-    --card-foreground: 10 36% 19%;
+    --card-foreground: 20 15% 25%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 10 36% 19%;
+    --popover-foreground: 20 15% 25%;
 
-    --primary: 21 59% 60%; /* Terracotta */
-    --primary-foreground: 30 50% 92%;
+    --primary: 35 60% 62%; /* Golden/Tan - Brand Accent */
+    --primary-foreground: 20 15% 25%;
 
-    --secondary: 96 23% 61%; /* Sage Green */
-    --secondary-foreground: 10 36% 19%;
+    --secondary: 205 15% 55%; /* Muted Slate Blue */
+    --secondary-foreground: 0 0% 98%;
 
-    --muted: 30 30% 85%;
-    --muted-foreground: 0 0% 26%; /* Charcoal */
+    --muted: 45 20% 90%;
+    --muted-foreground: 20 10% 40%;
 
-    --accent: 0 30% 65%; /* Dusty Rose */
-    --accent-foreground: 10 36% 19%;
+    --accent: 35 60% 62%; /* Golden accent */
+    --accent-foreground: 20 15% 25%;
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 30 50% 92%;
+    --destructive-foreground: 0 0% 98%;
 
-    --border: 30 20% 80%;
-    --input: 30 20% 80%;
-    --ring: 21 59% 60%;
+    --border: 45 15% 85%;
+    --input: 45 15% 85%;
+    --ring: 35 60% 62%;
 
     --radius: 1rem;
 
-    /* Custom Banian Variables */
-    --terracotta: 21 59% 60%;
-    --clay-cream: 30 50% 92%;
-    --earth-brown: 10 36% 19%;
-    --sage: 96 23% 61%;
-    --dusty-rose: 0 30% 65%;
-    --charcoal: 0 0% 26%;
+    /* Banian Brand Custom Variables */
+    --golden: 35 60% 62%; /* Brand golden accent #D4A574 */
+    --dark-charcoal: 20 15% 25%; /* Dark backgrounds #3E3530 */
+    --slate-blue: 205 15% 55%; /* Organic shape accent #708090 */
+    --warm-cream: 45 40% 96%; /* Light backgrounds */
+    --brand-brown: 25 20% 30%; /* Deep brown from product features */
     
     /* Glassmorphism */
-    --glass-bg: 0 0% 100% / 0.1;
-    --glass-border: 0 0% 100% / 0.2;
+    --glass-bg: 0 0% 100% / 0.08;
+    --glass-border: 0 0% 100% / 0.15;
     
     /* Animations */
     --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   .dark {
-    --background: 10 36% 19%;
-    --foreground: 30 50% 92%;
+    --background: 20 15% 25%;
+    --foreground: 45 40% 96%;
 
-    --card: 0 0% 15%;
-    --card-foreground: 30 50% 92%;
+    --card: 20 15% 20%;
+    --card-foreground: 45 40% 96%;
 
-    --popover: 0 0% 15%;
-    --popover-foreground: 30 50% 92%;
+    --popover: 20 15% 20%;
+    --popover-foreground: 45 40% 96%;
 
-    --primary: 21 59% 60%;
-    --primary-foreground: 10 36% 19%;
+    --primary: 35 60% 62%;
+    --primary-foreground: 20 15% 25%;
 
-    --secondary: 96 23% 61%;
-    --secondary-foreground: 10 36% 19%;
+    --secondary: 205 15% 55%;
+    --secondary-foreground: 0 0% 98%;
 
-    --muted: 0 0% 20%;
-    --muted-foreground: 30 30% 70%;
+    --muted: 20 10% 30%;
+    --muted-foreground: 45 20% 70%;
 
-    --accent: 0 30% 65%;
-    --accent-foreground: 30 50% 92%;
+    --accent: 35 60% 62%;
+    --accent-foreground: 20 15% 25%;
 
     --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 30 50% 92%;
+    --destructive-foreground: 45 40% 96%;
 
-    --border: 0 0% 25%;
-    --input: 0 0% 25%;
-    --ring: 21 59% 60%;
+    --border: 20 10% 35%;
+    --input: 20 10% 35%;
+    --ring: 35 60% 62%;
     
-    --glass-bg: 0 0% 0% / 0.2;
-    --glass-border: 0 0% 100% / 0.1;
+    --glass-bg: 0 0% 0% / 0.15;
+    --glass-border: 0 0% 100% / 0.08;
   }
 }
 

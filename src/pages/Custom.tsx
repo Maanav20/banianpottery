@@ -61,9 +61,9 @@ const Custom = () => {
       {/* Hero */}
       <section className="pt-32 pb-16 px-4">
         <div className="container mx-auto text-center">
-          <h1 className="text-5xl md:text-6xl font-serif font-bold text-foreground mb-6 animate-fade-in">
-            Custom Pottery Commissions
-          </h1>
+          <h2 className="text-4xl font-serif font-bold text-foreground mb-6">
+            Custom Pottery <span className="text-golden">Commissions</span>
+          </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto animate-fade-in-up">
             Let's bring your vision to life. Every piece is hand-built, one-of-a-kind, and crafted with intention.
           </p>
@@ -85,7 +85,7 @@ const Custom = () => {
                 style={{ animationDelay: `${idx * 0.08}s` }}
               >
                 <div className="flex-shrink-0">
-                  <div className="w-12 h-12 rounded-full bg-primary flex items-center justify-center text-primary-foreground font-bold text-xl">
+                  <div className="w-12 h-12 rounded-full bg-golden flex items-center justify-center text-dark-charcoal font-bold text-xl">
                     {item.step}
                   </div>
                 </div>
@@ -149,7 +149,7 @@ const Custom = () => {
                 style={{ animationDelay: `${idx * 0.1}s` }}
               >
                 <div className="flex items-start gap-3">
-                  <CheckCircle className="h-6 w-6 text-primary flex-shrink-0 mt-1" />
+                  <CheckCircle className="h-6 w-6 text-golden flex-shrink-0 mt-1" />
                   <div>
                     <h3 className="text-lg font-serif font-bold mb-2 text-foreground">{cat.title}</h3>
                     <p className="text-muted-foreground text-sm">{cat.desc}</p>
@@ -172,7 +172,7 @@ const Custom = () => {
             Whether it's custom pieces for a residential project or sculptural installations for commercial spaces,
             I'd love to collaborate and bring your vision to life.
           </p>
-          <Button asChild size="lg">
+          <Button asChild size="lg" className="bg-golden hover:bg-golden/90 text-dark-charcoal font-semibold">
             <Link to="/contact">Let's Collaborate</Link>
           </Button>
         </div>
@@ -187,7 +187,7 @@ const Custom = () => {
           <p className="text-lg text-muted-foreground mb-8">
             Every commission starts with a conversation. Share your vision, and together we'll create something beautiful.
           </p>
-          <Button asChild size="lg">
+          <Button asChild size="lg" className="bg-golden hover:bg-golden/90 text-dark-charcoal font-semibold">
             <Link to="/contact">Start Your Commission</Link>
           </Button>
         </div>

@@ -119,11 +119,11 @@ const Gallery = () => {
                     alt={item.title}
                     className="w-full h-auto transition-smooth group-hover:scale-105"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-earth-brown/90 via-earth-brown/40 to-transparent opacity-0 group-hover:opacity-100 transition-smooth">
-                    <div className="absolute bottom-0 left-0 right-0 p-6 text-clay-cream">
-                      <p className="text-xs font-semibold text-primary mb-1">{item.category}</p>
+                  <div className="absolute inset-0 bg-gradient-to-t from-dark-charcoal/90 via-dark-charcoal/40 to-transparent opacity-0 group-hover:opacity-100 transition-smooth">
+                    <div className="absolute bottom-0 left-0 right-0 p-6 text-warm-cream">
+                      <p className="text-xs font-semibold text-golden mb-1">{item.category}</p>
                       <h3 className="text-xl font-serif font-bold mb-2">{item.title}</h3>
-                      <p className="text-sm text-clay-cream/80">{item.description}</p>
+                      <p className="text-sm text-warm-cream/80">{item.description}</p>
                     </div>
                   </div>
                 </div>
@@ -136,7 +136,7 @@ const Gallery = () => {
       {/* Modal */}
       {selectedItem && (
         <div
-          className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-earth-brown/90 backdrop-blur-sm animate-fade-in"
+          className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-dark-charcoal/90 backdrop-blur-sm animate-fade-in"
           onClick={() => setSelectedItem(null)}
         >
           <div
@@ -149,17 +149,17 @@ const Gallery = () => {
                 alt={selectedItem.title}
                 className="w-full h-auto rounded-2xl"
               />
-              <div className="text-clay-cream">
-                <p className="text-sm font-semibold text-primary mb-2">{selectedItem.category}</p>
+              <div className="text-warm-cream">
+                <p className="text-sm font-semibold text-golden mb-2">{selectedItem.category}</p>
                 <h2 className="text-3xl font-serif font-bold mb-4">{selectedItem.title}</h2>
-                <p className="text-clay-cream/90 mb-4 leading-relaxed">{selectedItem.description}</p>
-                <div className="inline-block px-4 py-2 rounded-full bg-primary/20 text-sm font-medium mb-6">
+                <p className="text-warm-cream/90 mb-4 leading-relaxed">{selectedItem.description}</p>
+                <div className="inline-block px-4 py-2 rounded-full bg-golden/20 text-sm font-medium mb-6 text-golden">
                   {selectedItem.technique}
                 </div>
                 <Button
                   onClick={() => setSelectedItem(null)}
                   variant="outline"
-                  className="border-clay-cream/30 text-clay-cream hover:bg-clay-cream/10"
+                  className="border-warm-cream/30 text-warm-cream hover:bg-warm-cream/10"
                 >
                   Close
                 </Button>
