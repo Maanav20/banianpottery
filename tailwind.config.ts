@@ -52,6 +52,13 @@ export default {
         "dark-charcoal": "hsl(var(--dark-charcoal))",
         "warm-cream": "hsl(var(--warm-cream))",
         "brand-brown": "hsl(var(--brand-brown))",
+        coral: "hsl(var(--coral))",
+        teal: "hsl(var(--teal))",
+        purple: "hsl(var(--purple))",
+        pink: "hsl(var(--pink))",
+        lime: "hsl(var(--lime))",
+        "sunset-orange": "hsl(var(--sunset-orange))",
+        "sky-blue": "hsl(var(--sky-blue))",
       },
       fontFamily: {
         sans: ["Inter", "system-ui", "sans-serif"],
