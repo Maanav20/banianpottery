@@ -1,6 +1,6 @@
 import { Instagram, Mail, Phone } from "lucide-react";
 import { Link } from "react-router-dom";
-import logo from "@/assets/banian-logo.png";
+import logoIcon from "@/assets/banian-icon.png";
 
 const Footer = () => {
   return (
@@ -9,7 +9,10 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
           {/* Brand */}
           <div>
-            <img src={logo} alt="Banian Pottery Logo" className="h-20 w-auto mb-4" />
+            <div className="flex items-center gap-3 mb-4">
+              <img src={logoIcon} alt="Banian Pottery Icon" className="h-12 w-auto" />
+              <h3 className="text-2xl font-serif font-bold text-golden">Banian Pottery</h3>
+            </div>
             <p className="text-warm-cream/80 text-sm italic">
               Under the Banian roof, we explore, create, and connect.
             </p>
