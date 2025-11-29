@@ -27,8 +27,8 @@ const Home = () => {
             <span className="text-warm-cream">Where Roots Meet </span>
             <span className="text-golden">Clay</span>
           </h1>
-          <p className="text-xl md:text-2xl text-warm-cream/90 mb-8 max-w-2xl mx-auto">
-            Discover the art of hand-built pottery in a community space for creativity, connection, and healing.
+          <p className="text-xl md:text-2xl text-warm-cream/90 mb-8 max-w-2xl mx-auto italic">
+            Under the Banian roof, we explore, create, and connect.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button asChild size="lg" className="bg-golden hover:bg-golden/90 text-dark-charcoal font-semibold">

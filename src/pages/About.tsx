@@ -45,7 +45,7 @@ const About = () => {
                 that taught me to truly create.
               </p>
               <p className="text-lg text-muted-foreground leading-relaxed">
-                Today, at 27, I specialize in <span className="font-semibold text-primary">coil-based, hand-built pottery</span>—no
+                Today, at 27, I specialize in <span className="font-semibold text-golden">coil-based, hand-built pottery</span>—no
                 two pieces are ever the same. My studio is a reflection of who I am: chaotic, warm, a little uneven,
                 but full of life.
               </p>
@@ -74,7 +74,7 @@ const About = () => {
               together. Where creativity flows freely. Where imperfection is celebrated. Where you can show up messy,
               uncertain, or just curious—and leave with something beautiful.
             </p>
-            <p className="text-primary font-semibold italic text-center text-xl">
+            <p className="text-golden font-semibold italic text-center text-xl">
               "Like the banyan, we grow through our roots and thrive through connection."
             </p>
           </div>
