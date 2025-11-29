@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import logo from "@/assets/banian-logo.png";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -23,8 +24,8 @@ const Navigation = () => {
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <Link to="/" className="text-2xl font-serif font-bold text-foreground hover:text-primary transition-smooth">
-            Banian Pottery
+          <Link to="/" className="flex items-center gap-3 hover:opacity-80 transition-smooth">
+            <img src={logo} alt="Banian Pottery Logo" className="h-12 w-auto" />
           </Link>
 
           {/* Desktop Navigation */}
