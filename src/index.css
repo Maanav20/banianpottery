@@ -46,30 +46,12 @@ All colors MUST be HSL.
     --warm-cream: 45 40% 96%; /* Light backgrounds */
     --brand-brown: 25 20% 30%; /* Deep brown from product features */
     
-    /* Vibrant Abstract Colors */
-    --coral: 15 85% 65%; /* Vibrant coral/orange */
-    --teal: 180 65% 55%; /* Rich teal */
-    --purple: 270 55% 65%; /* Soft purple */
-    --pink: 340 75% 70%; /* Playful pink */
-    --lime: 85 70% 60%; /* Fresh lime green */
-    --sunset-orange: 25 90% 60%; /* Bold sunset orange */
-    --sky-blue: 200 70% 65%; /* Bright sky blue */
-    
-    /* Glassmorphism - Enhanced */
-    --glass-bg: 0 0% 100% / 0.12;
-    --glass-border: 0 0% 100% / 0.2;
-    --glass-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
-    
-    /* Gradients */
-    --gradient-sunset: linear-gradient(135deg, hsl(25, 90%, 60%), hsl(15, 85%, 65%), hsl(340, 75%, 70%));
-    --gradient-ocean: linear-gradient(135deg, hsl(200, 70%, 65%), hsl(180, 65%, 55%), hsl(205, 15%, 55%));
-    --gradient-forest: linear-gradient(135deg, hsl(85, 70%, 60%), hsl(150, 60%, 55%), hsl(180, 65%, 55%));
-    --gradient-lavender: linear-gradient(135deg, hsl(270, 55%, 65%), hsl(300, 60%, 70%), hsl(340, 75%, 70%));
-    --gradient-golden: linear-gradient(135deg, hsl(35, 60%, 62%), hsl(45, 70%, 55%), hsl(25, 90%, 60%));
+    /* Glassmorphism */
+    --glass-bg: 0 0% 100% / 0.08;
+    --glass-border: 0 0% 100% / 0.15;
     
     /* Animations */
     --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    --transition-bounce: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
   }
 
   .dark {
@@ -120,26 +102,16 @@ All colors MUST be HSL.
   /* Glassmorphism Effects */
   .glass {
     background: hsla(var(--glass-bg));
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
     border: 1px solid hsla(var(--glass-border));
-    box-shadow: var(--glass-shadow);
   }
   
   .glass-strong {
-    background: hsla(0, 0%, 100%, 0.18);
-    backdrop-filter: blur(24px);
-    -webkit-backdrop-filter: blur(24px);
-    border: 1px solid hsla(0, 0%, 100%, 0.3);
-    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.2);
-  }
-  
-  .glass-colorful {
-    background: linear-gradient(135deg, hsla(var(--glass-bg)), hsla(var(--primary) / 0.08));
+    background: hsla(0, 0%, 100%, 0.15);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
-    border: 1px solid hsla(var(--glass-border));
-    box-shadow: var(--glass-shadow);
+    border: 1px solid hsla(0, 0%, 100%, 0.25);
   }
   
   /* Organic Shapes */
@@ -181,52 +153,8 @@ All colors MUST be HSL.
     @apply bg-gradient-to-r from-primary via-accent to-secondary bg-clip-text text-transparent;
   }
   
-  .text-gradient-sunset {
-    background: var(--gradient-sunset);
-    @apply bg-clip-text text-transparent;
-  }
-  
-  .text-gradient-ocean {
-    background: var(--gradient-ocean);
-    @apply bg-clip-text text-transparent;
-  }
-  
-  /* Background Gradients */
-  .bg-gradient-sunset {
-    background: var(--gradient-sunset);
-  }
-  
-  .bg-gradient-ocean {
-    background: var(--gradient-ocean);
-  }
-  
-  .bg-gradient-forest {
-    background: var(--gradient-forest);
-  }
-  
-  .bg-gradient-lavender {
-    background: var(--gradient-lavender);
-  }
-  
-  .bg-gradient-golden {
-    background: var(--gradient-golden);
-  }
-  
   /* Hover Effects */
   .hover-lift {
     @apply transition-smooth hover:translate-y-[-4px] hover:shadow-lg;
-  }
-  
-  .hover-glow {
-    @apply transition-smooth hover:shadow-2xl hover:scale-105;
-  }
-  
-  /* Layered Elements */
-  .layer-float {
-    animation: float 6s ease-in-out infinite;
-  }
-  
-  .layer-float-delayed {
-    animation: float 6s ease-in-out infinite 2s;
   }
 }
