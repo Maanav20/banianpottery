@@ -2,8 +2,10 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import workshopCommunity from "@/assets/workshop-community.jpg";
 import { Button } from "@/components/ui/button";
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import { Calendar, Users, Clock, Sparkles, IndianRupee } from "lucide-react";
 import { Link } from "react-router-dom";
+import { useState } from "react";
 
 const workshops = [
   {
@@ -152,15 +154,9 @@ const Workshops = () => {
                 className="p-8 rounded-3xl glass border-2 border-border/30 hover-lift animate-fade-in"
                 style={{ animationDelay: `${idx * 0.08}s` }}
               >
-                <div className="flex items-start justify-between mb-4">
-                  <h3 className="text-2xl font-serif font-bold text-foreground pr-2">{workshop.title}</h3>
-                  <div className="flex items-center gap-1 text-golden font-bold text-xl flex-shrink-0">
-                    <IndianRupee className="h-4 w-4" />
-                    <span>{workshop.price.replace('₹', '').replace(',', '')}</span>
-                  </div>
-                </div>
+                <h3 className="text-2xl font-serif font-bold text-foreground mb-4">{workshop.title}</h3>
                 
-                <div className="space-y-2 mb-6">
+                <div className="space-y-2 mb-4">
                   <div className="flex items-center gap-2 text-sm text-muted-foreground">
                     <Clock className="h-4 w-4 text-golden" />
                     <span>{workshop.duration}</span>
@@ -170,18 +166,64 @@ const Workshops = () => {
                     <span>{workshop.spots} {workshop.spots === 1 ? 'person' : 'people'} per session</span>
                   </div>
                 </div>
-
-                <p className="text-muted-foreground mb-4 leading-relaxed text-sm">
-                  {workshop.description}
-                </p>
                 
                 <p className="text-golden font-medium italic text-sm mb-6">
                   {workshop.highlight}
                 </p>
 
-                <Button asChild className="w-full bg-golden hover:bg-golden/90 text-dark-charcoal font-semibold">
-                  <Link to="/contact">Book Now</Link>
-                </Button>
+                <Dialog>
+                  <DialogTrigger asChild>
+                    <Button className="w-full bg-golden hover:bg-golden/90 text-dark-charcoal font-semibold">
+                      More Information
+                    </Button>
+                  </DialogTrigger>
+                  <DialogContent className="max-w-2xl">
+                    <DialogHeader>
+                      <DialogTitle className="text-3xl font-serif text-foreground">{workshop.title}</DialogTitle>
+                    </DialogHeader>
+                    <div className="space-y-4 py-4">
+                      <div className="flex items-center justify-between">
+                        <div className="space-y-2">
+                          <div className="flex items-center gap-2 text-muted-foreground">
+                            <Clock className="h-5 w-5 text-golden" />
+                            <span className="font-medium">{workshop.duration}</span>
+                          </div>
+                          <div className="flex items-center gap-2 text-muted-foreground">
+                            <Users className="h-5 w-5 text-golden" />
+                            <span className="font-medium">{workshop.spots} {workshop.spots === 1 ? 'person' : 'people'} per session</span>
+                          </div>
+                        </div>
+                        <div className="text-right">
+                          <div className="flex items-center gap-1 text-golden font-bold text-3xl">
+                            <IndianRupee className="h-6 w-6" />
+                            <span>{workshop.price.replace('₹', '').replace(',', '')}</span>
+                          </div>
+                          <p className="text-xs text-muted-foreground mt-1">per person</p>
+                        </div>
+                      </div>
+                      
+                      <div className="border-t border-border pt-4">
+                        <p className="text-muted-foreground leading-relaxed mb-4">
+                          {workshop.description}
+                        </p>
+                        
+                        <p className="text-golden font-medium italic">
+                          {workshop.highlight}
+                        </p>
+                      </div>
+
+                      <div className="bg-muted/50 rounded-lg p-4">
+                        <p className="text-sm text-muted-foreground">
+                          All pieces will be given back to you fully fired and glazed in a span of 20 days
+                        </p>
+                      </div>
+
+                      <Button asChild className="w-full bg-golden hover:bg-golden/90 text-dark-charcoal font-semibold">
+                        <Link to="/contact">Book Now</Link>
+                      </Button>
+                    </div>
+                  </DialogContent>
+                </Dialog>
               </div>
             ))}
           </div>
