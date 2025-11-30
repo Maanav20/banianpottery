@@ -32,7 +32,7 @@ const Contact = () => {
             Let's Connect
           </h1>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto animate-fade-in-up">
-            Whether you want to book a workshop, commission a piece, or just say hello—we'd love to hear from you.
+            Whether you want to book a workshop, commission a piece, or just say hello, we'd love to hear from you.
           </p>
         </div>
       </section>

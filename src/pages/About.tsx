@@ -37,7 +37,7 @@ const About = () => {
               </h2>
               <p className="text-lg text-muted-foreground leading-relaxed">
                 In 2021, during the height of the pandemic lockdown, I found myself searching for something to fill
-                the silence. I picked up clay for the first time—awkward, messy, unpredictable. It was perfect.
+                the silence. I picked up clay for the first time: awkward, messy, unpredictable. It was perfect.
               </p>
               <p className="text-lg text-muted-foreground leading-relaxed">
                 What started as a way to pass time became a lifeline. Pottery taught me patience, presence, and
@@ -45,7 +45,7 @@ const About = () => {
                 that taught me to truly create.
               </p>
               <p className="text-lg text-muted-foreground leading-relaxed">
-                Today, at 27, I specialize in <span className="font-semibold text-golden">coil-based, hand-built pottery</span>—no
+                Today, at 27, I specialize in <span className="font-semibold text-golden">coil-based, hand-built pottery</span>. No
                 two pieces are ever the same. My studio is a reflection of who I am: chaotic, warm, a little uneven,
                 but full of life.
               </p>
@@ -67,12 +67,12 @@ const About = () => {
             <p>
               The <span className="font-semibold text-foreground">banyan tree</span> is a symbol of strength, community,
               and connection. Its roots run deep, its branches reach wide, and for centuries, it has been a gathering
-              place—a spot where people meet, talk, rest, and connect.
+              place, a spot where people meet, talk, rest, and connect.
             </p>
             <p>
               That's what I want this studio to be. Not just a place to make pottery, but a space where people come
               together. Where creativity flows freely. Where imperfection is celebrated. Where you can show up messy,
-              uncertain, or just curious—and leave with something beautiful.
+              uncertain, or just curious and leave with something beautiful.
             </p>
             <p className="text-golden font-semibold italic text-center text-xl">
               "Like the banyan, we grow through our roots and thrive through connection."
@@ -92,7 +92,7 @@ const About = () => {
             {[
               {
                 title: "Hand-Built, Not Perfect",
-                desc: "Every piece I create is made using the coil technique—building up layers of clay by hand. The result? Organic, asymmetric, beautifully imperfect pieces that feel alive.",
+                desc: "Every piece I create is made using the coil technique, building up layers of clay by hand. The result? Organic, asymmetric, beautifully imperfect pieces that feel alive.",
               },
               {
                 title: "One-of-a-Kind Creations",
@@ -104,7 +104,7 @@ const About = () => {
               },
               {
                 title: "Custom Commissions",
-                desc: "Have an idea? Let's bring it to life. I work with clients to create custom pottery pieces that reflect their vision and personality—perfect for gifts, interiors, or simply because.",
+                desc: "Have an idea? Let's bring it to life. I work with clients to create custom pottery pieces that reflect their vision and personality, perfect for gifts, interiors, or simply because.",
               },
             ].map((item, idx) => (
               <div
@@ -128,12 +128,12 @@ const About = () => {
           </h2>
           <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
             I dream of collaborating with interior designers to create immersive, pottery-filled spaces. I want to
-            host more themed parties—Halloween pots, bachelor/bachelorette pottery nights, and workshops that
+            host more themed parties like Halloween pots, bachelor/bachelorette pottery nights, and workshops that
             celebrate life's messy, beautiful moments.
           </p>
           <p className="text-lg text-muted-foreground leading-relaxed">
             Most of all, I want to keep building a community where people feel welcome, inspired, and free to
-            create without judgment. Because that's what pottery taught me—and that's what I want to share.
+            create without judgment. Because that's what pottery taught me, and that's what I want to share.
           </p>
         </div>
       </section>
