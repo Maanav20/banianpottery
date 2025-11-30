@@ -14,8 +14,8 @@ const workshops = [
     duration: "3.5 hours",
     price: "₹3,200",
     spots: 4,
-    description: "Learn to make contemporary pots using the coil & pinch method—an age-old technique with endless modern possibilities. From sculptural pieces to everyday vessels, you'll shape clay slowly, mindfully, and in your own style.",
-    highlight: "No wheel, no rush—just your hands, clay, and creativity.",
+    description: "Learn to make contemporary pots using the coil & pinch method, an age old technique with endless modern possibilities. From sculptural pieces to everyday vessels, you'll shape clay slowly, mindfully, and in your own style.",
+    highlight: "No wheel, no rush, just your hands, clay, and creativity.",
   },
   {
     id: 2,
@@ -23,8 +23,8 @@ const workshops = [
     duration: "1.5 hours",
     price: "₹1,850",
     spots: 6,
-    description: "Create flat forms—think platters, trinket trays, ash trays, plates... basically anything that lets your imagination flow. Want to make it extra special?",
-    highlight: "Add textures using flowers, stamps, and studio tools—so every piece carries your unique touch.",
+    description: "Create flat forms like platters, trinket trays, ash trays, plates... basically anything that lets your imagination flow. Want to make it extra special?",
+    highlight: "Add textures using flowers, stamps, and studio tools so every piece carries your unique touch.",
   },
   {
     id: 3,
@@ -41,7 +41,7 @@ const workshops = [
     duration: "1.5 hours",
     price: "₹2,600",
     spots: 4,
-    description: "Curious about pottery but not sure where to start? This workshop is the perfect introduction! You'll experience a gist of all the essential techniques—pinching, coiling, slab, wheel, texturing, and more.",
+    description: "Curious about pottery but not sure where to start? This workshop is the perfect introduction! You'll experience a gist of all the essential techniques like pinching, coiling, slab, wheel, texturing, and more.",
     highlight: "Explore clay in different ways and find your favorite method.",
   },
   {
@@ -50,7 +50,7 @@ const workshops = [
     duration: "1.5 hours",
     price: "₹1,850",
     spots: 1,
-    description: "Ever wanted to try the potter's wheel? This workshop gives you a gentle overview of wheel throwing—a chance to feel the clay spin beneath your hands and discover the rhythm of the wheel.",
+    description: "Ever wanted to try the potter's wheel? This workshop gives you a gentle overview of wheel throwing, a chance to feel the clay spin beneath your hands and discover the rhythm of the wheel.",
     highlight: "A grounding practice that invites presence of mind, patience, and flow.",
   },
   {
@@ -70,20 +70,12 @@ const additionalOfferings = [
     features: ["10 Days Handbuilding", "10 Days Wheel Pottery"],
   },
   {
-    title: "Studio Membership",
-    features: ["12 hours a week access"],
-  },
-  {
     title: "Potter Sundays",
     features: ["Drinks, Dinner & Clay"],
   },
   {
     title: "Book The Studio",
     features: ["Host workshops at our studio"],
-  },
-  {
-    title: "Ceramic Painting",
-    features: ["Paint on clay creations"],
   },
 ];
 
@@ -101,9 +93,9 @@ const Workshops = () => {
                 <span className="text-foreground">One Day. </span>
                 <span className="text-golden">Endless Creativity.</span>
               </h1>
-              <p className="text-xl text-muted-foreground mb-6 leading-relaxed">
-                No experience needed—just your curiosity and a love for creating.
-              </p>
+          <p className="text-xl text-muted-foreground mb-6 leading-relaxed">
+            No experience needed, just your curiosity and a love for creating.
+          </p>
               <div className="space-y-3 text-lg">
                 <p className="flex items-start gap-3">
                   <span className="text-golden mt-1">•</span>

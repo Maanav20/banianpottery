@@ -10,7 +10,7 @@ const customProcessSteps = [
   {
     step: "1",
     title: "Share Your Vision",
-    desc: "Tell me about what you're imagining—colors, shapes, purpose, inspiration.",
+    desc: "Tell me about what you're imagining: colors, shapes, purpose, inspiration.",
   },
   {
     step: "2",
@@ -115,7 +115,7 @@ const Custom = () => {
               />
               <h3 className="text-2xl font-serif font-bold mb-3 text-foreground">Sculptural Vases</h3>
               <p className="text-muted-foreground">
-                Each custom vase is shaped to complement your space and style—asymmetric, organic, and full of character.
+                Each custom vase is shaped to complement your space and style: asymmetric, organic, and full of character.
               </p>
             </div>
 
