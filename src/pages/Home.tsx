@@ -58,24 +58,24 @@ const Home = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
-              { img: potteryBowl, title: "Coil & Pinch Workshop", desc: "Students created stunning organic bowls" },
-              { img: potteryVase, title: "Wheel Throwing Session", desc: "First-time potters mastering the wheel" },
-              { img: potteryMugs, title: "Mug Making Workshop", desc: "Custom mugs crafted with love" },
+              { img: potteryBowl, title: "Handbuilding Bowl Workshop", date: "October 12, 2024" },
+              { img: potteryVase, title: "Textured Vase Workshop", date: "November 15, 2024" },
+              { img: potteryMugs, title: "Wheel-Thrown Mugs Workshop", date: "December 8, 2024" },
             ].map((item, idx) => (
               <div
                 key={idx}
-                className="group relative overflow-hidden rounded-3xl hover-lift animate-scale-in"
+                className="relative overflow-hidden rounded-3xl animate-scale-in"
                 style={{ animationDelay: `${idx * 0.1}s` }}
               >
                 <img
                   src={item.img}
                   alt={item.title}
-                  className="w-full h-80 object-cover transition-smooth group-hover:scale-105"
+                  className="w-full h-80 object-cover"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-dark-charcoal/90 via-dark-charcoal/40 to-transparent opacity-0 group-hover:opacity-100 transition-smooth">
-                  <div className="absolute bottom-0 left-0 right-0 p-6 text-warm-cream">
-                    <h3 className="text-2xl font-serif font-bold mb-2 text-golden">{item.title}</h3>
-                    <p className="text-warm-cream/80">{item.desc}</p>
+                <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-transparent to-transparent">
+                  <div className="p-6 text-center">
+                    <h3 className="text-xl font-serif font-bold text-foreground mb-1">{item.title}</h3>
+                    <p className="text-sm text-muted-foreground">Date: {item.date}</p>
                   </div>
                 </div>
               </div>
