@@ -11,7 +11,6 @@ const Navigation = () => {
   const navLinks = [
     { to: "/", label: "Home" },
     { to: "/about", label: "About" },
-    { to: "/gallery", label: "Gallery" },
     { to: "/workshops", label: "Workshops" },
     { to: "/custom", label: "Custom Orders" },
     { to: "/contact", label: "Contact" },

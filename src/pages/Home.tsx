@@ -38,29 +38,29 @@ const Home = () => {
               </Link>
             </Button>
             <Button asChild size="lg" variant="outline" className="glass-strong text-warm-cream border-warm-cream/30 hover:bg-warm-cream/10">
-              <Link to="/gallery">View Gallery</Link>
+              <Link to="/contact">Get in Touch</Link>
             </Button>
           </div>
         </div>
       </section>
 
-      {/* Featured Pottery */}
+      {/* Previous Workshops */}
       <section className="py-20 px-4">
         <div className="container mx-auto">
           <div className="text-center mb-12 animate-fade-in">
             <h2 className="text-4xl md:text-5xl font-serif font-bold text-foreground mb-4">
-              Handcrafted with <span className="text-golden">Love</span>
+              Previous <span className="text-golden">Workshops</span>
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Every piece is one-of-a-kind, shaped by hands, imperfection, and intention.
+              Glimpses of creativity, community, and beautiful chaos from our past sessions.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
-              { img: potteryBowl, title: "Organic Bowls", desc: "Hand-built with coil technique" },
-              { img: potteryVase, title: "Asymmetric Vases", desc: "Embracing beautiful chaos" },
-              { img: potteryMugs, title: "Custom Mugs", desc: "Unique shapes, personal stories" },
+              { img: potteryBowl, title: "Coil & Pinch Workshop", desc: "Students created stunning organic bowls" },
+              { img: potteryVase, title: "Wheel Throwing Session", desc: "First-time potters mastering the wheel" },
+              { img: potteryMugs, title: "Mug Making Workshop", desc: "Custom mugs crafted with love" },
             ].map((item, idx) => (
               <div
                 key={idx}
@@ -83,9 +83,9 @@ const Home = () => {
           </div>
 
           <div className="text-center mt-12">
-            <Button asChild size="lg" variant="outline">
-              <Link to="/gallery">
-                Explore Full Gallery
+            <Button asChild size="lg" className="bg-golden hover:bg-golden/90 text-dark-charcoal font-semibold">
+              <Link to="/workshops">
+                Join Our Next Workshop
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
             </Button>
