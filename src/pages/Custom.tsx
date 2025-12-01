@@ -2,6 +2,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import potteryVase from "@/assets/pottery-vase.jpg";
 import potteryBowl from "@/assets/pottery-bowl.jpg";
+import customProcess from "@/assets/custom-process.png";
 import { CheckCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
@@ -76,6 +77,14 @@ const Custom = () => {
           <h2 className="text-4xl font-serif font-bold text-foreground mb-12 text-center">
             The Commission Process
           </h2>
+
+          <div className="mb-12 animate-fade-in">
+            <img
+              src={customProcess}
+              alt="Custom pottery commission process illustration"
+              className="w-full h-auto rounded-3xl shadow-2xl"
+            />
+          </div>
 
           <div className="space-y-6">
             {customProcessSteps.map((item, idx) => (
