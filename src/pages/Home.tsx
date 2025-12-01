@@ -4,9 +4,9 @@ import { ArrowRight, Heart, Users, Sparkles } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import heroImage from "@/assets/hero-pottery.jpg";
-import potteryBowl from "@/assets/pottery-bowl.jpg";
-import potteryVase from "@/assets/pottery-vase.jpg";
-import potteryMugs from "@/assets/pottery-mugs.jpg";
+import workshopHandbuilding from "@/assets/workshop-handbuilding.jpg";
+import workshopVase from "@/assets/workshop-vase.jpg";
+import workshopMugs from "@/assets/workshop-mugs.jpg";
 
 const Home = () => {
   return (
@@ -58,9 +58,9 @@ const Home = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
-              { img: potteryBowl, title: "Handbuilding Bowl Workshop", date: "October 12, 2024" },
-              { img: potteryVase, title: "Textured Vase Workshop", date: "November 15, 2024" },
-              { img: potteryMugs, title: "Wheel-Thrown Mugs Workshop", date: "December 8, 2024" },
+              { img: workshopHandbuilding, title: "Handbuilding Bowl Workshop", date: "October 12, 2024" },
+              { img: workshopVase, title: "Textured Vase Workshop", date: "November 15, 2024" },
+              { img: workshopMugs, title: "Wheel-Thrown Mugs Workshop", date: "December 8, 2024" },
             ].map((item, idx) => (
               <div
                 key={idx}
