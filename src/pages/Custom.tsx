@@ -3,9 +3,11 @@ import Footer from "@/components/Footer";
 import potteryVase from "@/assets/pottery-vase.jpg";
 import potteryBowl from "@/assets/pottery-bowl.jpg";
 import customProcess from "@/assets/custom-process.png";
-import { CheckCircle } from "lucide-react";
+import { CheckCircle, Ruler, Weight, Sparkles, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import { products } from "@/data/products";
+import { Badge } from "@/components/ui/badge";
 
 const customProcessSteps = [
   {
@@ -60,23 +62,119 @@ const Custom = () => {
       <Navigation />
 
       {/* Hero */}
-      <section className="pt-32 pb-16 px-4">
-        <div className="container mx-auto text-center">
-          <h2 className="text-4xl font-serif font-bold text-foreground mb-6">
-            Custom Pottery <span className="text-golden">Commissions</span>
-          </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto animate-fade-in-up">
-            Let's bring your vision to life. Every piece is hand-built, one-of-a-kind, and crafted with intention.
+      <section className="relative pt-36 pb-24 px-4 overflow-hidden">
+        <div className="absolute inset-0 -z-10 bg-gradient-to-b from-warm-cream via-background to-muted/40" />
+        <div className="absolute top-20 -left-32 w-96 h-96 bg-golden/15 organic-shape blur-3xl -z-10" />
+        <div className="absolute bottom-0 -right-32 w-[28rem] h-[28rem] bg-slate-blue/10 organic-shape-2 blur-3xl -z-10" />
+        <div className="container mx-auto text-center max-w-4xl">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full glass mb-6 animate-fade-in">
+            <Sparkles className="h-4 w-4 text-golden" />
+            <span className="text-sm font-medium tracking-wide text-foreground/80">Studio Catalogue & Commissions</span>
+          </div>
+          <h1 className="text-5xl md:text-6xl font-serif font-bold text-foreground mb-6 leading-tight animate-fade-in-up">
+            Hand‑built pottery,
+            <br />
+            <span className="text-golden italic">made to live with you.</span>
+          </h1>
+          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed animate-fade-in-up">
+            Browse pieces currently in the studio, or commission something entirely your own.
+            Every piece is shaped by hand, glazed with care, and fired one at a time.
           </p>
+          <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
+            <Button asChild size="lg" className="bg-golden hover:bg-golden/90 text-dark-charcoal font-semibold">
+              <a href="#catalogue">Browse Catalogue <ArrowRight className="h-4 w-4" /></a>
+            </Button>
+            <Button asChild size="lg" variant="outline">
+              <Link to="/contact">Start a Commission</Link>
+            </Button>
+          </div>
+        </div>
+      </section>
+
+      {/* Catalogue */}
+      <section id="catalogue" className="py-20 px-4 bg-background">
+        <div className="container mx-auto max-w-7xl">
+          <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+            <div>
+              <p className="text-golden uppercase tracking-[0.2em] text-xs font-semibold mb-3">The Catalogue</p>
+              <h2 className="text-4xl md:text-5xl font-serif font-bold text-foreground">
+                Pieces from the studio
+              </h2>
+              <p className="text-muted-foreground mt-3 max-w-2xl">
+                A living archive of {products.length} hand‑built pieces. Dimensions are approximate, as every piece is unique.
+              </p>
+            </div>
+            <Button asChild variant="outline" className="self-start md:self-auto">
+              <Link to="/contact">Enquire about a piece</Link>
+            </Button>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+            {products.map((product, idx) => (
+              <article
+                key={product.id}
+                className="group relative rounded-2xl overflow-hidden bg-card border border-border/60 shadow-sm hover:shadow-2xl transition-all duration-500 hover:-translate-y-1 animate-fade-in"
+                style={{ animationDelay: `${Math.min(idx * 0.03, 0.4)}s` }}
+              >
+                <div className="relative aspect-square overflow-hidden bg-muted">
+                  <img
+                    src={product.image}
+                    alt={product.name}
+                    loading="lazy"
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  />
+                  <div className="absolute top-3 left-3 flex gap-2">
+                    {product.status === "sold-out" && (
+                      <Badge variant="secondary" className="bg-dark-charcoal text-warm-cream border-0">Sold out</Badge>
+                    )}
+                    {product.status === "defect" && (
+                      <Badge variant="secondary" className="bg-slate-blue/90 text-warm-cream border-0">Studio second</Badge>
+                    )}
+                  </div>
+                  <div className="absolute top-3 right-3">
+                    <span className="text-[10px] font-mono tracking-wider px-2 py-1 rounded-full bg-background/80 backdrop-blur text-muted-foreground">
+                      №{String(product.id).padStart(2, "0")}
+                    </span>
+                  </div>
+                </div>
+
+                <div className="p-5">
+                  <h3 className="font-serif text-lg font-semibold text-foreground leading-tight mb-3 min-h-[3rem]">
+                    {product.name}
+                  </h3>
+
+                  <dl className="space-y-1.5 text-sm">
+                    <div className="flex items-start gap-2 text-muted-foreground">
+                      <Ruler className="h-3.5 w-3.5 mt-0.5 text-golden flex-shrink-0" />
+                      <dd className="flex flex-wrap gap-x-3 gap-y-0.5">
+                        {product.height && <span><span className="text-foreground/60">H</span> {product.height}</span>}
+                        {product.width && <span><span className="text-foreground/60">W</span> {product.width}</span>}
+                        {product.length && <span><span className="text-foreground/60">L</span> {product.length}</span>}
+                      </dd>
+                    </div>
+                    {product.weight && (
+                      <div className="flex items-center gap-2 text-muted-foreground">
+                        <Weight className="h-3.5 w-3.5 text-golden flex-shrink-0" />
+                        <dd>{product.weight}</dd>
+                      </div>
+                    )}
+                  </dl>
+                </div>
+              </article>
+            ))}
+          </div>
         </div>
       </section>
 
       {/* Process */}
-      <section className="py-20 px-4 bg-muted/30">
+      <section className="py-24 px-4 bg-muted/30">
         <div className="container mx-auto max-w-4xl">
-          <h2 className="text-4xl font-serif font-bold text-foreground mb-12 text-center">
-            The Commission Process
-          </h2>
+          <div className="text-center mb-12">
+            <p className="text-golden uppercase tracking-[0.2em] text-xs font-semibold mb-3">How it works</p>
+            <h2 className="text-4xl md:text-5xl font-serif font-bold text-foreground">
+              The Commission Process
+            </h2>
+          </div>
 
           <div className="mb-12 animate-fade-in">
             <img
